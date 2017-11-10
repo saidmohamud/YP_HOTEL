@@ -1,0 +1,83 @@
+/*******www.nehrugroup.in*******/
+/**********Deepak Raj Priyanshu********/
+/************************************/
+
+
+
+
+.form-inline .form-group{
+	margin-bottom: 20px;
+	float: right;
+}
+.title{
+    text-decoration:underline;
+    padding: 10px 5px;
+}
+.btn-launch,.btn-launch:hover, .btn-launch:active, .btn-launch:focus{
+	background-color: #FF000D;
+    border: medium none #CC462E;
+    box-shadow: 0 3px 0 #d35400, 0 5px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 40px;
+    margin-top:10%;
+}
+.bt-login,.bt-login:hover, .bt-login:active, .bt-login:focus {
+    background-color: #ff8627;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ff8627;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ff8627;
+	box-shadow:inset 0px 1px 0px 0px #CC9085;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #FA2A05), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #FA2A05 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #FA2A05 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #FA2A05 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #FF0800 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #FF0000 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8627', endColorstr='#ff8627',GradientType=0);
+	border:1px solid #FA2A05;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+}
+
+
+.login-tab {
+	margin: 0 auto;
+	max-width: 450px;
+}
+
+.login-modal-header {
+	background: red;
+	color: #fff;
+}
+
+.login-modal-header .modal-title {
+	color: #fff;
+}
+
+.login-modal-header .close {
+	color:red;
+}
+
+.login-modal i {
+	color: #000;
+}
+
+.login-modal form {
+	max-width: 350px;
+}
+
+.tab-pane form {
+	margin: 0 auto;
+}
+.login-modal-footer{
+	margin-top:15px;
+	margin-bottom:15px;
+}
