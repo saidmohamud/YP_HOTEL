@@ -143,7 +143,7 @@ while ($rows = mysqli_fetch_array($search_result))
             </div>  
                       <div class="form-group">
                         <div class="col-md-7  col-md-offset-4">
-                           <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-success">Save</button>	
+                           <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register"  class="btn btn-lg btn-primary" >Save</button>	
                         </div>
                       </div>
 				</form> 

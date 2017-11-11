@@ -49,8 +49,8 @@ $data[3] =$_POST['floor'];
 $data[4] =$_POST['rno'];
 $data[5] =$_POST['rtype'];
 $data[6] =$_POST['rprice'];
-$data[7] =$_POST['room_status'];
-$data[8] =$_POST['paid'];
+$data[7] =$_POST['paid'];
+
 
 
 
@@ -92,7 +92,7 @@ while (  $row=$ressalt->fetch_assoc()) {
 $id=$row['gid'];
 $name=$row['gfullname'];
 } 
-$sql = "UPDATE room SET gfullname='$info[1]', gdate='$info[2]', floor='$info[3]', rno='$info[4]', rtype='$info[5]', rprice='$info[6]', room_status='$info[7]', paid='$info[8]' WHERE gid='$info[0]'";
+$sql = "UPDATE room SET gfullname='$info[1]', gdate='$info[2]', floor='$info[3]', rno='$info[4]', rtype='$info[5]', rprice='$info[6]', paid='$info[7]' WHERE gid='$info[0]'";
 if ($conn->query($sql)===TRUE) {
     
 }

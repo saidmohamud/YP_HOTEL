@@ -37,9 +37,8 @@ $data[3] =$_POST['floor'];
 $data[4] =$_POST['rno'];
 $data[5] =$_POST['rtype'];
 $data[6] =$_POST['rprice'];
-$data[7] =$_POST['room_status'];
-$data[8] =$_POST['paid'];
-
+$data[7] =$_POST['paid'];
+$data[8] =$_POST['room_status'];
 return $data;
 }
 
@@ -137,11 +136,8 @@ th{
       tr:nth-child(even) {background: #FFCE43}
       .table-responsive table tr:nth-child(odd) {background: #2ecc71}
       </style>
-   
-
   </head>
   <body>
-  
 <?php
     $conn = new mysqli("localhost", "root", "", "simpledata");
     if(isset($_POST["query"]))
@@ -166,13 +162,12 @@ th{
                     <th>Room Number</th>
                     <th>Room Type</th>
                     <th>Room Price</th>
-                    <th>Room status</th>
                     <th>Apaid</th>
                     <th>Action</th>
                     <th>Action</th>
                     <th>Action</th>
                     <th>Action</th>
-                   </tr>       
+                   </tr>
         <?php
             while($row = mysqli_fetch_array($result)){ ?>
                 <tr>
@@ -183,7 +178,6 @@ th{
                     <td><?php echo $row["rno"] ?></td>
                     <td><?php echo $row["rtype"] ?></td>
                     <td><?php echo $row["rprice"] ?></td>
-                    <td><?php echo $row["room_status"] ?></td>
                     <td><?php echo $row["paid"] ?></td>
                    
                     <td>
@@ -202,10 +196,9 @@ th{
                                         <div class="row"> <div  class="col-md-5"> <label class="col pull-left">Date::</label>     <input type="date" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div>
                                               <div class="col-md-5"><label class="col pull-left">Floor:</label> <input type="text" name="floor" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['floor']; ?>"><br></div></div>
                                         <div class="row"> <div  class="col-md-5"> <label class="col pull-left">Room number:</label>      <input type="text" name="rno" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rno']; ?>"><br></div>
-                                             <div class="col-md-5"><label class="col pull-left">Room type:</label> <input type="text" name="rtype" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rtype']; ?>"><br></div></div>
+                                             <div class="col-md-5"><label class="col pull-left">Room type:</label> <input type="text" name="rtype" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rtype']; ?>"><br></div>
                                         <div class="row"> <div  class="col-md-5"> <label class="col pull-left">Room price:</label>     <input type="text" name="rprice" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rprice']; ?>"><br></div>
-                                              <div class="col-md-5"><label class="col pull-left">Room status:</label>  <input type="text" name="room_status" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['room_status']; ?>"><br></div></div>
-                                        <div class="row"> <div  class="col-md-5 col-md-offset-3" > <label class="col pull-left">piad:</label>     <input type="text" name="paid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['paid']; ?>"><br></div></div>
+                                       <div  class="col-md-5 " > <label class="col pull-left">piad:</label>     <input type="text" name="paid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['paid']; ?>"><br></div></div>
                                             <button style="width:100%; margin: 15px 0px 0px 0px;" type="submit" class="btn btn-success" name="update" id="#edit-<?php echo $row['gid']; ?>">Update</button>
                                         </form>
                              </td>

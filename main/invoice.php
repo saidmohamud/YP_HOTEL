@@ -188,7 +188,7 @@ while ($rows = mysqli_fetch_array($search_result))
                      <div class="row">
                       <div class="form-group">
                         <div class="col-sm-7  col-md-offset-4">
-                           <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-success">SAVE</button>	
+                           <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-primary">SAVE</button>	
                         </div>
                         </div>
                         </div>

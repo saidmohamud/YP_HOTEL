@@ -13,6 +13,7 @@
      Developed By:- Eng Siciid & Eng Wagad
     </div>
     <!--  si automically  ah buuna u qaadan leftiga -->
-    <strong>Copyright &copy; 2017  All rights reserved.</strong>
+<!-- Copyright © 2006–2017 Rainmaker Digital, LLC · Powered by the Rainmaker Platform -->
+    <strong>Copyright &copy; 2017 GOLIS TELECOM SOMALIA.</strong>
   </footer>
   </div>

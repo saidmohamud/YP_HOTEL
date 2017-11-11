@@ -69,8 +69,6 @@ mysqli_select_db($link,"simpledata");
   </div>
   <div class="panel-body">
     <form  class="form-horizontal"  id="guest-form"  method="post" >
-				
-				
         		<div class="row">
 					<div class="col-md-4">
 								<label control-label" for="name"">Full Name*</label>
@@ -148,27 +146,10 @@ mysqli_select_db($link,"simpledata");
             </div>
             </div>
             </div>
-           
-        
-             <!-- <div class="row"> 
-             <div class="col-md-1 ">
-             <label >Gender</label>
-             </div>
-             </div>
-             <div class="row"> 
-             <div class="col-md-3">
-            <label class="radio-inline" control-label" for="ggender-male"">
-                 <input name="ggender" id="ggender-male" value="Male" type="radio" required/>Male
-             </label>
-             <label class="radio-inline"  control-label" for="ggender-female"">
-                  <input name="ggender" id="ggender-female" value="Female" type="radio" required/>Female
-             </label>
-        </div>
-   </div> -->
 				<div class="row">
 					<div class="col-md-5 col-md-offset-3">
 					<div class="form-group">
-					<button  style="width:100%; margin: 15px 0px 0px 0px;"   type="submit" name="register"  class="btn btn-lg btn-success" >Rigester</button>	
+					<button  style="width:100%; margin: 15px 0px 0px 0px;"   type="submit" name="register"  class="btn btn-lg btn-primary" >Rigester</button>	
 								</div>
                 </div>    
 				</div>

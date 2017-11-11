@@ -48,26 +48,22 @@
       font-size: xx-large;
       color: #FF0000;
     }
- 
     body {
     background-image: url("backyaasmiin2.jpg");
     background-color: #cccccc;
     background-repeat:no-repeat;
     background-size: 100% 100%;
 }
-
 .modal-content {
     background-image: url("loginback.jpg");
     background-color: #cccccc;
     background-repeat:no-repeat;
     background-size: 100% 100%;
 }
-.btn-success{background-color:#ff0000}
+.btn-success{background-color:blue}
     </style>
       </head>
-    
       <body>
-    
     <p align="center">&nbsp;</p>
     <p align="center" class="style4">
     <img src="main/css/images/yaasmiin.png" style="height:160px"><img><br>
@@ -75,49 +71,36 @@
        </p>
     <p align="center"><button href="javascript:;" class="btn btn-success" data-toggle="modal" data-target="#loginModal">
           LOGIN HERE
-  
     </button>  
     </p>
-   
     <p align="center">&nbsp;</p>
     <p align="center">&nbsp;</p>
     <p align="center" class="style4">
-    <img src="main/css/images/footer.png" style="height:160px"><img><br>
+    <img src="main/images/footer.png" style="height:160px"><img><br>
         </p>
-    
-    
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content login-modal">
-
                 <div class="modal-header login-modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title text-center" id="loginModalLabel"> HOTEL YAASMIIN MANAGEMENT SYSTEM</h4>
                 </div>
-
-
                 <div class="modal-body">
                   <div class="text-center">
                     <div role="tabpanel" class="login-tab">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                       <li role="presentation" class="active"><a id="signin-taba" href="#home" aria-controls="home" role="tab" data-toggle="tab">LOG IN</a></li>
-
                     </ul>
-                
                     <!-- Tab panes -->
                    <div class="tab-content">
-
-
                       <div role="tabpanel" class="tab-pane active text-center" id="home">
                         &nbsp;&nbsp;
                         <span id="login_fail" class="response_error" style="display: none;">Loggin failed, please try again.</span>
                         <div class="clearfix"></div>
-
         <!-- billowga formka loginka -->
                         <form method="post" action="index.php" role="login">
                           <?php include('errors.php'); ?>
-
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>

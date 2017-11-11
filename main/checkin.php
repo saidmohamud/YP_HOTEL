@@ -37,7 +37,7 @@ $paid="";
 			if($conn->query($sql) === true){
 				header("location:rsearch.php");
 			}
-			$query = "UPDATE roomno set room_status='$info[7]' WHERE rno='$info[3]'";
+			$query = "UPDATE roomno set room_status='Accupied' WHERE rno='$info[3]'";
 			if($conn->query($query) === true){
 			  echo("Data has been updated");
 			}
@@ -114,7 +114,7 @@ include "tables/config.php";
                        <br>
             <br>
 			<div class="row">
-            <div class="col-sm-4  ">
+            <div class="col-sm-5">
 								<label style="color:blue" control-label" for="city"">Room Number*</label>
                 
                 <select style="color:black" id="rno" name="rno"  class="form-control" >
@@ -130,26 +130,11 @@ include "tables/config.php";
                                         ?>
                                   </select>
 							</div>
-              <div class="col-sm-4   " >
+              <div class="col-sm-5" >
 								<label style="color:blue" control-label" for="floor"">Floor*</label>
 								<div class="control-group">
                                  <input style="color:black" type="text"  id="floor" name="floor" placeholder="Enter floor no.."   class="form-control" > 
                                 </div>
-							</div>
-                            <div class="col-sm-4   " >
-								<label style="color:blue" control-label" for="floor"">Room Status*</label>
-                                <select style="color:black" id="room_status" name="room_status"  class="form-control" >
-                
-                                 <?php
-                                            $sql = "SELECT rstatus  From rstatus";
-                                            $result = $conn->query($sql);
-                                            if($result->num_rows > 0) {
-                                                while($row = $result->fetch_assoc()) { ?>
-                                            <option > <?php echo $row['rstatus']; ?></option>
-                                            <?php }
-                                            }
-                                        ?>
-                                  </select>
 							</div>
                                    </div>
             <br>
@@ -190,12 +175,12 @@ include "tables/config.php";
                         <div class="col-md-6  col-md-offset-4">
                          
 						  
-                           <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-success">SAVE</button>	
+                           <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-primary">SAVE</button>	
                         </div>
                       </div>
 				</form> 
         </div>
-				</div>
+	   </div>
 	</div>
     </div> 
     </div>
