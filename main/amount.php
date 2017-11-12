@@ -95,47 +95,51 @@ while ($rows = mysqli_fetch_array($search_result))
 			<div class="panel-body">
 				<form  class="form-horizontal"  id="guest-form" action="amount.php"  method="post" >
 						<div class="row">
-                      <div class="col-md-7 col-md-offset-2 ">
+                      <div class="col-md-6 ">
                       	<label  control-label" for="gfullname"">Fullname*</label>
                         <div class="control-group">
                         <input style="color:black" type="text" id="gfullname" name="gfullname"  value="<?php echo($gfullname);?>"   placeholder="Enter name " class="form-control" >
                         </div>
                         </div>
-                        <div class="row">
-					<div class="col-sm-12 ">
+                       
+					<div class="col-sm-0 ">
 						<input type="hidden"  name="gid" value="<?php echo  $gid; ?>" 
 						class="form-control" value="<?php 
 						//	echo $row['id']; ?>">	
 				</div>	
-                        </div>
-                        <br>
-		<div class="row">
-    <div class="col-sm-4" style="margin-left:10px">
+                        
+
+                   <div class="col-sm-6" >
 								<label  control-label" for="city"">Room Number*</label>
                 <input style="color:black" type="text" id="rno" name="rno"  value="<?php echo($rno);?>"   placeholder="Enter rno " class="form-control" >
 							</div>
-              <div class="col-sm-4   ">
+              </div>
+              <br>
+              <div class="row">
+              <div class="col-sm-6   ">
 								<label  control-label" for="floor"">Floor*</label>
 								<div class="control-group">
               <input style="color:black" type="text"  id="floor" name="floor" value="<?php echo($floor);?>" placeholder="Enter floor no.."   class="form-control" > 
               </div>
 							</div>
-					<div class="col-sm-3 ">
-					<div class="form-group">
+              
+              
+					<div class="col-sm-6 ">
+					
 						<label  control-label" for="rtype"">Room Type*</label>
             <input style="color:black" type="text"  id="rtype" name="rtype" value="<?php echo($rtype);?>" placeholder="Enter rtype no.."   class="form-control" > 
-				   	</div>		
+				   		
             </div>
             </div>
             <br>
             <div class="row">
-            <div class="col-md-3 col-md-offset-3">
+            <div class="col-md-6">
 								<label>Date peid*</label>
                 <div class="control-group">
 								<input    type="text" id="date1" name="gdate" value="<?php echo($gdate);?>" class="form-control"  ><br>
 							</div>	
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
 								<label  control-label" for="city"">Cost Paid*</label>
                
                 <input style="color:black" type="text" id="rno" name="paid"    placeholder="Enter mony paid " class="form-control" >

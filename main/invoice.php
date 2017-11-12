@@ -110,77 +110,82 @@ while ($rows = mysqli_fetch_array($search_result))
 			<div class="panel-body">
 				<form  class="form-horizontal"  id="guest-form" action="invoice.php"  method="post" >
 						<div class="row">
-                      <div class="col-md-7 col-md-offset-2 ">
+                      <div class="col-md-5  ">
                       	<label  control-label" for="gfullname"">Fullname*</label>
                         <div class="control-group">
                         <input style="color:black" type="text" id="gfullname" name="gfullname"  value="<?php echo($gfullname);?>"   placeholder="Enter name " class="form-control" >
                         </div>
                         </div>
-                        <div class="row">
-					<div class="col-sm-12 ">
+                       
+                       
+					<div class="col-sm-1 ">
 						<input type="hidden"  name="gid" value="<?php echo  $gid; ?>" 
 						class="form-control" value="<?php 
 						//	echo $row['id']; ?>">	
 				</div>	
-                        </div>
-                        <br>
-		<div class="row">
-    <div class="col-sm-3">
+                        
+                       
+	
+    <div class="col-sm-4">
 								<label control-label" for="city"">Room Number*</label>
                 <input style="color:black" type="text" id="rno" name="rno"  value="<?php echo($rno);?>"   placeholder="Enter rno " class="form-control" >
 							</div>
-              <div class="col-sm-3 ">
+              <div class="col-sm-2 ">
 								<label control-label" for="floor"">Floor*</label>
 								<div class="control-group">
               <input style="color:black" type="text"  id="floor" name="floor" value="<?php echo($floor);?>" placeholder="Enter floor no.."   class="form-control" > 
               </div>
 							</div>
+              </div>
+              <br>
+              <div class="row">
 					<div class="col-sm-3 ">
-					<div class="form-group">
+				
 						<label  control-label" for="rtype"">Room Type*</label>
             <input style="color:black" type="text"  id="rtype" name="rtype" value="<?php echo($rtype);?>" placeholder="Enter rtype no.."   class="form-control" >                     
-				   	</div>		
+  
             </div>
-            <div class="col-md-2">
+           
+            <div class="col-md-3">
 								<label  >Amount_Paid</label>
                 <div class="control-group">
 								<input style="background-color:white" type="text" id="paid" name="paid" value="<?php echo($paid);?>"  class="form-control"  ><br>
 							</div>	
               </div>
-              </div>
-            <br>
-            <div class="row">
-            <div class="col-sm-2">
+  
+            <div class="col-sm-3">
 								<label  >Check in Date*</label>
                 <div class="control-group">
 								<input  style="background-color:white"  type="text" id="date1" name="gdate"value="<?php echo($gdate);?>"   class="form-control"  ><br>
 							</div>	
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-3">
 								<label  >Check out Date*</label>
                 <div class="control-group">
 								<input style="background-color:white" type="text" id="date2" name="bdate"  class="form-control"  ><br>
 							</div>	
               </div>
-              <div class="col-sm-2">
-								<label  >Days</label>
-                <div class="control-group">
-								<input style="background-color:white" type="text" id="diff" name="quantity"  class="form-control"  ><br>
-							</div>	
               </div>
-              <div class="col-sm-2">
+              <div class-"row">
+              <div class="col-sm-3">
+								<label  >Days</label>
+              
+								<input style="background-color:white" type="text" id="diff" name="quantity"  class="form-control"  >
+							
+              </div>
+              <div class="col-sm-3">
 								<label  >Room_Price</label>
                 <div class="control-group">
 								<input style="background-color:white" type="text" id="price" name="price"  value="<?php echo($rprice);?>"  class="form-control"  ><br>
 							</div>	
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-3">
 								<label  >Total</label>
                 <div class="control-group">
 								<input style="background-color:white" type="text" id="amount" name="amount"  class="form-control"  ><br>
 							</div>	
               </div>
-              <div class="col-lg-2">
+              <div class="col-lg-3">
 						<label   control-label" for="rtype"">Amount_Due</label>
             <input style="color:black" type="text"  id="dayn"     class="form-control" > 
             </div>
@@ -190,7 +195,7 @@ while ($rows = mysqli_fetch_array($search_result))
                         <div class="col-sm-7  col-md-offset-4">
                            <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-primary">SAVE</button>	
                         </div>
-                        </div>
+                           </div>
                         </div>
 				</form> 
         </div>

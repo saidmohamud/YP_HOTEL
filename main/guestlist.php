@@ -156,7 +156,7 @@ th{
         <?php
             while($row = mysqli_fetch_array($result)){ ?>
                 <tr>
-                    <td style="background-color:#ff0080"", color:"black" ><?php echo $row["gid"] ?></td>
+                    <td style="background-color:#ff0080", color:"black" ><?php echo $row["gid"] ?></td>
                     <td ><?php echo $row["gfullname"] ?></td>
                     <td><?php echo $row["gaddress"] ?></td>
                     <td><?php echo $row["gcountry"] ?></td>

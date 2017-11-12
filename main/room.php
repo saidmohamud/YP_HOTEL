@@ -71,7 +71,7 @@ include "tables/config.php";
 				<form class="form-horizontal"  id="guest-form"  method="post" action="room.php">
 										
 						<div class="row">
-						<div class="col-md-5 col-md-offset-3">
+						<div class="col-md-6 ">
 								<label control-label" for="state"">Floor*</label>
 								<div class="control-group">
                                   <select id="floor" name="floor"  class="form-control" required>
@@ -87,18 +87,20 @@ include "tables/config.php";
                                   </select> 
                                 </div>
 							</div>	
-              </div>
-              <br>
-              <div class="row">
-						 <div class="col-md-5  ">
+            
+              
+						 <div class="col-md-6  ">
 								<label control-label" for="city"">Room Number*</label>
 								<div class="control-group">
               
 								<input type="number" name="rno" placeholder="Enter room no.." class="form-control" required>
                                 </div>
 							</div>
-								 <div class="col-sm-5  ">
-					<div class="form-group">
+                            </div>
+                            <br>
+                            <div class="row">
+					 <div class="col-sm-4  ">
+					
 						<label control-label" for="rprice"">Room Status*</label>
 						<select id="room_status" name="room_status"  class="form-control" required>
                                     <?php
@@ -111,14 +113,13 @@ include "tables/config.php";
                                             }
                                         ?>
                                   </select> 
-					</div>		
+						
 					
             </div>
-              </div>
-              <br>
-            <div class="row">
-				 <div class="col-md-5  " style="margin-left:10px">
-					<div class="form-group">
+             
+            
+				 <div class="col-md-4 " >
+				
 						<label control-label" for="rprice"">Room Type*</label>
 						<select id="room_type" name="room_type"  class="form-control" required>
                                     <?php
@@ -131,12 +132,11 @@ include "tables/config.php";
                                             }
                                         ?>
                                   </select> 
-					</div>		
+				
 					
             </div>
-            
-            <div class="col-sm-5 " style="margin-left:10px">
-					<div class="form-group">
+            <div class="col-sm-4 " >
+					
 						<label control-label" for="rprice"">Room Price*</label>
 						<select id="rprice" name="room_price"  class="form-control" required>
                                    <?php
@@ -150,7 +150,7 @@ include "tables/config.php";
                                         ?>
                                    
                                   </select> 
-                              </div>		
+                              		
                               
                                 </div>
                                 

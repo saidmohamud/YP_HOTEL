@@ -88,10 +88,10 @@ include "tables/config.php";
 			<div class="panel-body">
 				<form  class="form-horizontal"  id="guest-form"  method="post" >				
 						<div class="row">
-                      <div class="col-md-5">
+                      <div class="col-md-6">
                       	<label control-label" for="gfullname"">Fullname*</label>
                         <div class="control-group">
-                         <select style="color:black" id="gfullname" name="gfullname"  class="form-control" >
+                         <select  id="gfullname" name="gfullname"  class="form-control" >
                                  <?php
                                             $sql = "select gfullname  from guest";
                                             $result = $conn->query($sql);
@@ -104,18 +104,17 @@ include "tables/config.php";
                                   </select> 
                         </div>
                         </div>           
-                        <div class="col-md-5 ">
-								<label  style="color:blue" >check in date*</label>
+                        <div class="col-md-6 ">
+								<label >check in date*</label>
                 <div class="control-group">
 								<input style="color:black" id="datepicker" type="date" name="gdate" placeholder="Enter datae Code Here.." class="form-control" >
 							</div>	
               </div>
-                      </div>	
-                       <br>
-            <br>
-			<div class="row">
-            <div class="col-sm-5">
-								<label style="color:blue" control-label" for="city"">Room Number*</label>
+              </div>  
+              <br>
+              <div class="row">
+            <div class="col-sm-4">
+								<label  control-label" for="city"">Room Number*</label>
                 
                 <select style="color:black" id="rno" name="rno"  class="form-control" >
                 
@@ -130,18 +129,20 @@ include "tables/config.php";
                                         ?>
                                   </select>
 							</div>
-              <div class="col-sm-5" >
-								<label style="color:blue" control-label" for="floor"">Floor*</label>
+                            
+                           
+                            
+              <div class="col-sm-4" >
+								<label control-label" for="floor"">Floor*</label>
 								<div class="control-group">
                                  <input style="color:black" type="text"  id="floor" name="floor" placeholder="Enter floor no.."   class="form-control" > 
                                 </div>
 							</div>
-                                   </div>
-            <br>
-            <br>
-            <div class="row">
-					<div class="col-sm-3 ">
-						<label  style="color:blue" control-label" for="room_price"">Room Type*</label>
+                                  
+           
+            
+					<div class="col-sm-4 ">
+						<label   control-label" for="room_price"">Room Type*</label>
                        <select style="color:black" id="rtype" name="rtype"  class="form-control" >
                                 <?php
                                             $sql = "select rtype  from rooms ";
@@ -154,27 +155,28 @@ include "tables/config.php";
                                         ?>
                                   </select>             
             </div>
-            <div class="col-sm-4 " style="margin-left:10px">
+            </div>
+            <br>
+            <div class="row">
+            <div class="col-sm-6" >
 					
-						<label style="color:blue" control-label" for="room_price"">Room Price*</label>
+						<label  control-label" for="room_price"">Room Price*</label>
 					
           <input style="color:black" type="text" id="price" name="rprice" placeholder="Enter room price.."   class="form-control" > 	
             </div>
             
-                      <div class="col-md-4  ">
-							<label style="color:blue" >Amount paid</label>
+                      <div class="col-md-6 ">
+							<label  >Amount paid</label>
               <div class="control-group">
 							<input style="color:black" type="text" name="paid" placeholder="Enter amount paid Code Here.." class="form-control" >
 					
               </div>
             </div>
                       </div>
-              
+                      
 
                       <div class="form-group">
                         <div class="col-md-6  col-md-offset-4">
-                         
-						  
                            <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-primary">SAVE</button>	
                         </div>
                       </div>
@@ -206,10 +208,7 @@ $(document).ready(function(){
       <script>
       $(document).ready(function(){
           $("#rtype").on("change", function(){
-            
           var ItemID = $(this).val();
-       
-          
           if(ItemID){
               $.get(
                   "type.php",
