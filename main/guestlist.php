@@ -170,25 +170,24 @@ th{
                         <div class="modal fade" role="dialog" id="edit-<?php echo $row['gid']; ?>">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background:#1e00ff">
+                                    <div class="modal-header" style="background:rgb(255, 129, 0)">
+                                    <h4 style="color:white"> <strong>GUEST REGISTRATION</strong></h4>
                                     <button type="button" class="close" data-dismiss="modal" style="margin-top:-10px">&times;<B style="color:#fc0019;margin-left:-5px">X</B></button>
                                     </div>
                                     <div class="modal-body">
                                     <form class="form-group formedit"  method="POST">
-                                       
-                                    <div class="row"> <div  class="col-md-5"> <label class="col pull-left">Guestid:</label>  <input type="text" name="gid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gid']; ?>"><br></div>
-                                                      <div class="col-md-5"><label class="col pull-left">Fullname:</label>  <input type="text" name="gfullname" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gfullname']; ?>"><br></div></div>
-                                    <div class="row"> <div  class="col-md-5"><label class="col pull-left">Address:</label>   <input type="text" name="gaddress" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gaddress']; ?>"><br></div>
-                                                     <div  class="col-md-5"><label class="col pull-left">Country:</label> <input type="text" name="gcountry" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gcountry']; ?>"><br></div></div>
-                                  <div class="row"> <div  class="col-md-5"><label class="col pull-left">City:</label> <input type="text" name="gcity" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gcity']; ?>"><br> </div>
+                                    <div class="row">  <div  class="col-md-0"> <label class="col pull-left"></label>  <input type="hidden" name="gid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gid']; ?>"><br></div></div>
+                                    <div class="row">          <div class="col-md-6"><label class="col pull-left">Fullname:</label>  <input type="text" name="gfullname" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gfullname']; ?>"><br></div>
+                                     <div  class="col-md-6"><label class="col pull-left">Address:</label>   <input type="text" name="gaddress" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gaddress']; ?>"><br></div></div>
+                                     <div class="row">    <div  class="col-md-6"><label class="col pull-left">Country:</label> <input type="text" name="gcountry" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gcountry']; ?>"><br></div>
+                                   <div  class="col-md-6"><label class="col pull-left">City:</label> <input type="text" name="gcity" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gcity']; ?>"><br> </div></div>
                                             
-                                                <div  class="col-md-5"><label class="col pull-left">Date:</label>  <input type="date" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div></div>
-                              <div class="row"> <div  class="col-md-5"><label class="col pull-left">Tellphone:</label> <input type="text" name="gphone" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gphone']; ?>"><br></div>
+                                   <div class="row"><div  class="col-md-6"><label class="col pull-left">Date:</label>  <input type="date" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div>
+                             <div  class="col-md-6"><label class="col pull-left">Tellphone:</label> <input type="text" name="gphone" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gphone']; ?>"><br></div></div>
+                             <div class="row">     <div  class="col-md-6"> <label class="col pull-left">Gmail:</label> <input type="text" name="gemail" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gemail']; ?>"><br> </div>
+                              <div  class="col-md-6 "><label class="col pull-left">Gender:</label> <input type="text" name="ggender" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['ggender']; ?>"><br></div></div>
+                              <button style="width:50%;background:rgb(255, 129, 0)"type="submit" name="update" id="#edit-<?php echo $row['gid']; ?>"> <h4 style="color:white"> <strong> Update </strong> </h4> </button>
 
-                              
-                              <div  class="col-md-5"></div>     <div  class="col-md-5"> <label class="col pull-left">Gmail:</label> <input type="text" name="gemail" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gemail']; ?>"><br> </div></div>
-                              <div class="row"> <div  class="col-md-5 col-md-offset-3" ><label class="col pull-left">Gender:</label> <input type="text" name="ggender" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['ggender']; ?>"><br></div></div>
-                                            <button style="width:100%; margin: 15px 0px 0px 0px;" type="submit" class="btn btn-success" name="update" id="#edit-<?php echo $row['gid']; ?>">  Update </button>
                                         </form>
                              </td>
                                     </div>                              

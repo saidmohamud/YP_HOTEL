@@ -44,7 +44,7 @@ return $data;
 
 if (isset($_POST['searchid'])) {
     $info = getData();
-    $sql = "SELECT * FROM room WHERE gid= '$info[0]'";
+    $sql = "SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room WHERE gid= '$info[0]'";
     $search_result =mysqli_query($conn,$sql);
 if (mysqli_num_rows($search_result)){
  while ($rows=mysqli_fetch_array($search_result)) {
@@ -66,7 +66,7 @@ $paid=$rows['paid'];
 
 
 if (isset($_POST['search'])) {
-    $search_query= "SELECT * FROM room";
+    $search_query= "SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room";
 	$search_result = mysqli_query($conn, $search_query);
 while ($rows = mysqli_fetch_array($search_result))
 			{
@@ -143,11 +143,11 @@ th{
     if(isset($_POST["query"]))
     {
         $search = mysqli_real_escape_string($conn, $_POST["query"]);
-        $query = " SELECT * FROM room  WHERE gid LIKE '%".$search."%' OR gfullname LIKE '%".$search."%'  OR floor LIKE '%".$search."%'  OR rno LIKE '%".$search."%'";
+        $query = " SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status FROM room  WHERE gid LIKE '%".$search."%' OR gfullname LIKE '%".$search."%'  OR floor LIKE '%".$search."%'  OR rno LIKE '%".$search."%'";
     }
     else
     {
-        $query = " SELECT * FROM room ORDER BY gid ";
+        $query = " SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room ORDER BY gid ";
     }
     $result = mysqli_query($conn, $query);
     if(mysqli_num_rows($result) > 0)
@@ -193,7 +193,7 @@ th{
                                         <form class="form-group formedit"  method="POST">
                                         <div class="row"> <div  class="col-md-6"> <label class="col pull-left">Id:</label> <input type="text" name="gid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gid']; ?>"><br></div>
                                              <div class="col-md-6"><label class="col pull-left">Fullname::</label>  <input type="text" name="gfullname" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gfullname']; ?>"><br></div></div>
-                                        <div class="row"> <div  class="col-md-6"> <label class="col pull-left">Date::</label>     <input type="date" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div>
+                                        <div class="row"> <div  class="col-md-6"> <label class="col pull-left">Date::</label>     <input type="text" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div>
                                               <div class="col-md-6"><label class="col pull-left">Floor:</label> <input type="text" name="floor" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['floor']; ?>"><br></div></div>
                                         <div class="row"> <div  class="col-md-6"> <label class="col pull-left">Room number:</label>      <input type="text" name="rno" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rno']; ?>"><br></div>
                                              <div class="col-md-6"><label class="col pull-left">Room type:</label> <input type="text" name="rtype" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rtype']; ?>"><br></div></div>

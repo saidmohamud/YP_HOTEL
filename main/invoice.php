@@ -36,7 +36,7 @@ return $data;
 }
 if (isset($_GET['gid'])) {
   $id=$_GET['gid'];
-$sql= "SELECT * FROM room WHERE gid ='$id'";
+$sql= "SELECT gid, gfullname, date_format(gdate,'%m/%d/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room WHERE gid ='$id'";
 $search_result = mysqli_query($conn, $sql);
 while ($rows = mysqli_fetch_array($search_result))
   { 
@@ -116,16 +116,11 @@ while ($rows = mysqli_fetch_array($search_result))
                         <input style="color:black" type="text" id="gfullname" name="gfullname"  value="<?php echo($gfullname);?>"   placeholder="Enter name " class="form-control" >
                         </div>
                         </div>
-                       
-                       
 					<div class="col-sm-1 ">
 						<input type="hidden"  name="gid" value="<?php echo  $gid; ?>" 
 						class="form-control" value="<?php 
 						//	echo $row['id']; ?>">	
 				</div>	
-                        
-                       
-	
     <div class="col-sm-4">
 								<label control-label" for="city"">Room Number*</label>
                 <input style="color:black" type="text" id="rno" name="rno"  value="<?php echo($rno);?>"   placeholder="Enter rno " class="form-control" >
@@ -140,7 +135,6 @@ while ($rows = mysqli_fetch_array($search_result))
               <br>
               <div class="row">
 					<div class="col-sm-3 ">
-				
 						<label  control-label" for="rtype"">Room Type*</label>
             <input style="color:black" type="text"  id="rtype" name="rtype" value="<?php echo($rtype);?>" placeholder="Enter rtype no.."   class="form-control" >                     
   
