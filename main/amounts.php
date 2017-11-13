@@ -62,9 +62,6 @@ else {
     echo" Error updating record".mysql_error($conn);
 }
 }
-
-
-
 if(isset($_GET['idDelete'])){
     $idDelete = $_GET['idDelete'];
     $sql = "delete from dbiling where gid='$idDelete'";
