@@ -161,22 +161,20 @@ th{
                        <div class="modal fade" role="dialog" id="edit-<?php echo $row['gid']; ?>">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background-color:blue">
+                                    <div class="modal-header"  style="background:rgb(255, 129, 0)">
                                     <button type="button" class="close" data-dismiss="modal" style="margin-top:-10px">&times;<B style="color:white;margin-left:-5px">X</B></button>
-                                        <!-- <h3 id="">Update Guest<//?php echo $row['gid']; ?></h3> -->
+                                    <h4 style="color:white"> <strong> INVOICE UPDATE</strong> </h4>
                                     </div>
                                     <div class="modal-body">
                                                 <form class="form-group formedit"  method="POST">
-                                                <div class="row"> <div  class="col-md-6"> <label class="col pull-left">ID:</label>     <input type="nomber" name="gid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gid']; ?>"><br></div>
-                                                      <div class="col-md-6"><label class="col pull-left">Fullname:</label>     <input type="text" name="gfullname" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gfullname']; ?>"><br></div></div>
-                                                <div class="row"> <div  class="col-md-6"> <label class="col pull-left">Room Number:</label>     <input type="text" name="rno" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rno']; ?>"><br></div>
-                                                      <div class="col-md-6"><label class="col pull-left">Floor:</label> <input type="text" name="floor" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['floor']; ?>"><br></div></div>
-                                                <div class="row"> <div  class="col-md-4"> <label class="col pull-left">Room Type:</label>      <input type="text" name="rtype" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rtype']; ?>"><br></div>
-                                                       <div class="col-md-4"><label class="col pull-left">Date Paid:</label>  <input type="text" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div>
-                                              <div  class="col-md-4" ><label class="col pull-left">Cost paid</label>     <input type="text" name="paid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['paid']; ?>"><br></div></div>
-                                                    
-                                                    <button style="width:100%; margin: 15px 0px 0px 0px;" type="submit" class="btn btn-success" name="update" id="#edit-<?php echo $row['gid']; ?>">  Update </button>
-                                    
+                                                <div class="row"> <div  class="col-md-6"> <label class="col pull-left"></label>     <input type="hidden" name="gid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gid']; ?>"><br></div></div>
+                                                <div class="row">         <div class="col-md-6"><label class="col pull-left">Fullname:</label>     <input type="text" name="gfullname" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gfullname']; ?>"><br></div>
+                                           <div  class="col-md-6"> <label class="col pull-left">Room Number:</label>     <input type="text" name="rno" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rno']; ?>"><br></div></div>
+                                           <div class="row">         <div class="col-md-6"><label class="col pull-left">Floor:</label> <input type="text" name="floor" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['floor']; ?>"><br></div>
+                                                 <div  class="col-md-6"> <label class="col pull-left">Room Type:</label>      <input type="text" name="rtype" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['rtype']; ?>"><br></div></div>
+                                                 <div class="row">       <div class="col-md-6"><label class="col pull-left">Date Paid:</label>  <input type="text" name="gdate" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['gdate']; ?>"><br></div>
+                                              <div  class="col-md-6" ><label class="col pull-left">Cost paid</label>     <input type="text" name="paid" id="#edit-<?php echo $row['gid']; ?>" class="form-control" value="<?php echo $row['paid']; ?>"><br></div></div>
+                                              <button style="width:50%;background:rgb(255, 129, 0)"type="submit" name="update" id="#edit-<?php echo $row['gid']; ?>"> <h4 style="color:white"> <strong> Update </strong> </h4> </button>   
                                         </form>
                              </td>
                                     </div>

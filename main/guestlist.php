@@ -171,7 +171,7 @@ th{
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header" style="background:rgb(255, 129, 0)">
-                                    <h4 style="color:white"> <strong>GUEST REGISTRATION</strong></h4>
+                                    <h4 style="color:white"> <strong> GUEST UPDATE</strong> </h4>
                                     <button type="button" class="close" data-dismiss="modal" style="margin-top:-10px">&times;<B style="color:#fc0019;margin-left:-5px">X</B></button>
                                     </div>
                                     <div class="modal-body">

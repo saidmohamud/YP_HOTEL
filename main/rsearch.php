@@ -8,8 +8,6 @@
     <title>YAASMIIN | HOTEL</title>
     <?php include("Linkfooter.php"); ?>
     <?php include("links.php"); ?>
-    
-    
 </head>
 <body class="hold-transition skin-purple-light  sidebar-mini" onload="timing()">
       <div class="wrapper">
@@ -30,15 +28,9 @@ $rno="";
 $rtype="";
 $room_status="";
 $rprice="";
-
-
-
-
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
 $conn = new mysqli($host,$user,$pswd,$db);//(MySQLi Object-oriented)
-
-
 function getData()
 {
 $data =array();
@@ -50,16 +42,8 @@ $data[4] =$_POST['rno'];
 $data[5] =$_POST['rtype'];
 $data[6] =$_POST['rprice'];
 $data[7] =$_POST['paid'];
-
-
-
-
-
-
-
 return $data;
 }
-
 if (isset($_POST['searchid'])) {
     $info = getData();
     $sql = "SELECT * FROM room WHERE gid= '$info[0]'";
@@ -75,13 +59,9 @@ $rtype=$rows['rtype'];
 $rprice=$rows['rprice'];
 $room_status=$rows['room_status'];
 $paid=$rows['paid'];
-
-
-
 }
 }
 }
-
 // Update Command
 if (isset($_POST['update'])) {
       $info = getData();
@@ -94,13 +74,11 @@ $name=$row['gfullname'];
 } 
 $sql = "UPDATE room SET gfullname='$info[1]', gdate='$info[2]', floor='$info[3]', rno='$info[4]', rtype='$info[5]', rprice='$info[6]', paid='$info[7]' WHERE gid='$info[0]'";
 if ($conn->query($sql)===TRUE) {
-    
 }
 else {
     echo" Error updating record".mysql_error($conn);
 }
 }
-
 if(isset($_GET['idDelete'])){
     $idDelete = $_GET['idDelete'];
     $sql = "delete from room where gid='$idDelete'";
@@ -141,7 +119,6 @@ if(isset($_GET['idDelete'])){
                 <div id="result"></div>
     </div>
     </div>
-   
 <script>
         $(document).ready(function(){
         load_data();
@@ -170,14 +147,9 @@ if(isset($_GET['idDelete'])){
         });
     });
 </script>         
-      
-    
         <?php include("dashFooter.php"); ?>    
   
     <?php include("footer.php"); ?>
-
-
-
     </div>
 </body> 
 </html>
