@@ -18,15 +18,9 @@ $floor ="";
 $rtype ="";
 $gdate ="";
 $paid ="";
-
-
-
-
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
 $conn = new mysqli($host,$user,$pswd,$db);//(MySQLi Object-oriented)
-
-
 function getData()
 {
 $data =array();
