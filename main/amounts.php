@@ -2,9 +2,9 @@
 include "tables/config.php";
 session_start();
 if(!isset($_SESSION['username'])){
-    header('location: login.php');
+ //header('location: login.php');
 }
-// header("location: guestlist.php");
+ //header("location: guestlist.php");
 ?>
 <?php
 $host ="localhost";
