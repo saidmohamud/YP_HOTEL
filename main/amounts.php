@@ -18,15 +18,9 @@ $floor ="";
 $rtype ="";
 $gdate ="";
 $paid ="";
-
-
-
-
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
 $conn = new mysqli($host,$user,$pswd,$db);//(MySQLi Object-oriented)
-
-
 function getData()
 {
 $data =array();
@@ -68,9 +62,6 @@ else {
     echo" Error updating record".mysql_error($conn);
 }
 }
-
-
-
 if(isset($_GET['idDelete'])){
     $idDelete = $_GET['idDelete'];
     $sql = "delete from dbiling where gid='$idDelete'";

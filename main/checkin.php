@@ -173,8 +173,6 @@ include "tables/config.php";
               </div>
             </div>
                       </div>
-                      
-
                       <div class="form-group">
                         <div class="col-md-6  col-md-offset-4">
                            <button style="width:50%; margin: 15px 0px 0px 0px;" type="submit" name="register" class="btn btn-lg btn-primary">SAVE</button>	
