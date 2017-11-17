@@ -166,7 +166,7 @@ th{
                     <th>Action</th>
                     <th>Action</th>
                     <th>Action</th>
-                    <th>Action</th>
+                   
                    </tr>
         <?php
             while($row = mysqli_fetch_array($result)){ ?>
@@ -206,15 +206,13 @@ th{
                                 </div>
                             </div>
                         </div>   
-                        <td>
-                        <a href="?idDelete=<?php echo $row['gid'] ?>"><button name="idDelete" type="submit" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i> Delete</button></a>
-                        </td>           
+                        <td>     <a href="amount.php?gid=<?php echo $row['gid'] ?>"  
+                    class="btn btn-danger btn-sm"> <i class="fa fa-usd"></i></button>INVOICE</a> </td>
+                    </td>           
                     <td>     <a href="invoice.php?gid=<?php echo $row['gid'] ?>"  
                     class="btn btn-primary btn-sm"> <i class="fa fa-table"></i></button> ChECK OUT</a> </td>
                     </td>  
-                    <td>     <a href="amount.php?gid=<?php echo $row['gid'] ?>"  
-                    class="btn btn-success btn-sm"> <i class="fa fa-usd"></i></button>INVOICE</a> </td>
-                    </td>   
+                       
   <div>
                 </tr>
                 <?php 

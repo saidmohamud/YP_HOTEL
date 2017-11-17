@@ -46,20 +46,27 @@ th{
       margin:10px;
       font-size: 18px;
       display: inline-block;
+      
     }
     option{
       padding:10px 20px 10px 20px;
+      background:rgb(198, 83, 72);
+      color:white;
     }
     #ab{
       font-size:18px;
       display: inline-block;
     }
+    #qq{
+        background:rgb(198, 83, 72);
+       color:white;
+    }
     #rr{
-       background:#7d0a6f;
+       background:rgb(198, 83, 72);
        color:white;
     }
     #tt{
-       background:#7d0a6f;
+       background:rgb(198, 83, 72);
        color:white;
     }
 </style>
@@ -75,8 +82,9 @@ th{
         <?php include("dashboard.php"); ?>
       <div class="container">
       <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-<div id="ab">Room NO: </div> 
+      <div class="col-md-8 col-md-offset-1">
+<br>
+<br>
  <select style="color:black" id="rno" name="rno"  class="form-control" >
                                              <?php
                                             $sql = "select rno  from roomno";
@@ -88,7 +96,7 @@ th{
                                                             }
                                                               ?>
                                                           </select>
-<br>
+                                                          <br>
 <div id="table-container">
 <?php
       $conn =mysqli_connect("localhost", "root", "", "simpledata");
@@ -113,7 +121,7 @@ th{
       if($colored == 'Available'){
       $colored = 'available';
    }
-   echo '<td id="" ><span class="'.$colored.'">'.$output['room_status'].'</span></td>';
+   echo '<td id="qq" ><span class="'.$colored.'">'.$output['room_status'].'</span></td>';
    echo '</tr>'; 
             };
  echo '</table>';

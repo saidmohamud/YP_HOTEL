@@ -115,7 +115,7 @@ if(isset($_GET['idDelete'])){
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12  ">
-     <h3 class="bg-primary" align="center">GUEST LIST</h3>
+     <h3 style="border:2px solid white; background-color:#b4b4b4"; align="center"> <B style="font-family: Times New Roman, Times, serif; color:white"><strong>GUEST LIST</strong></B></h3>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">Search</span>

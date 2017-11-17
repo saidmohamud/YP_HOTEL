@@ -24,7 +24,7 @@
       if($colored == 'Available'){
       $colored = 'available';
    }
-   echo '<td><span class="'.$colored.'">'.$output['room_status'].'</span></td>';
+   echo '<td id="qq"><span class="'.$colored.'">'.$output['room_status'].'</span></td>';
    echo '</tr>'; 
             };
  echo '</table>';

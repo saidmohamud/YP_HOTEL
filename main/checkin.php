@@ -159,7 +159,6 @@ include "tables/config.php";
             <br>
             <div class="row">
             <div class="col-sm-6" >
-					
 						<label  control-label" for="room_price"">Room Price*</label>
 					
           <input style="color:black" type="text" id="price" name="rprice" placeholder="Enter room price.."   class="form-control" > 	
