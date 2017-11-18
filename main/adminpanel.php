@@ -36,9 +36,6 @@
                             <h3>GUEST</h3>
                             <p>Guest list</p>
                           </div>
-                          <div class="icon" style="margin-top:30px; margin-right:30px">
-                          <h1 style="color:white">4</h1>
-                          </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="fa fa-home"></i>
                           </div>

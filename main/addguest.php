@@ -157,7 +157,7 @@ mysqli_select_db($link,"simpledata");
         </div>
         </div>
        
-				</div>
+	</div>
 	</div>
     <?php include("dashFooter.php"); ?>    
     <?php include("footer.php"); ?>

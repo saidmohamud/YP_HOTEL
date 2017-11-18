@@ -7,7 +7,7 @@ $rno="";
 $floor="";
 $rtype="";
 $rprice="";
-$room_status="";
+
 $paid="";
 	    function getData(){
 		$data = array();
@@ -18,7 +18,7 @@ $paid="";
 		$data[4] = $_POST['floor'];
 		$data[5] = $_POST['rtype'];
 		$data[6] = $_POST['rprice'];
-		$data[7] = $_POST['room_status'];
+		
 		$data[8] = $_POST['paid'];
 		return $data;
 	    }

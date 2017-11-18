@@ -69,7 +69,7 @@
     <img src="main/css/images/yaasmiin.png" style="height:160px"><img><br>
     <img src="main/css/images/welcome.png" style="height:90px; width:600px"><img><br>
        </p>
-    <p align="center"><button href="javascript:;" class="btn btn-success" data-toggle="modal" data-target="#loginModal">
+    <p style="color:red" align="center"><button href="javascript:;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal">
           LOGIN HERE
     </button>  
     </p>

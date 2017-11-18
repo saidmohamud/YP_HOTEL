@@ -84,14 +84,14 @@ th{
       <div class="row">
       <div class="col-md-8 col-md-offset-1">
 <br>
-<br>
- <select style="color:black" id="rno" name="rno"  class="form-control" >
+<h3 style="border:2px solid white; background-color:#b4b4b4"; align="center"> <B style="font-family: Times New Roman, Times, serif; color:white"><strong>ROOM STATUS LIST</strong></B></h3>
+ <select style="color:black" id="rno" name="rno"   class="form-control" >
                                              <?php
                                             $sql = "select rno  from roomno";
                                             $result = $conn->query($sql);
                                             if($result->num_rows > 0) {
                                             while($row = $result->fetch_assoc()) { ?>
-                                            <option value="<?php echo $row['rno']; ?>" > <?php echo $row['rno']; ?></option>
+                                            <option  value="<?php echo $row['rno']; ?>" > <?php echo $row['rno']; ?></option>
                                                           <?php }
                                                             }
                                                               ?>
