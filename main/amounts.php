@@ -78,8 +78,6 @@ if(isset($_GET['idDelete'])){
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,8 +88,6 @@ if(isset($_GET['idDelete'])){
     <title>YAASMIIN | HOTEL</title>
     <?php include("Linkfooter.php"); ?>
     <?php include("links.php"); ?>
-    
-
 </head>
 <body class="hold-transition skin-purple-light  sidebar-mini" onload="timing()">
       <div class="wrapper">

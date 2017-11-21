@@ -119,19 +119,10 @@
                     
                           <div class="clearfix"></div>
                           <div class="login-modal-footer">
-
-
                           </div>
                       </form>
      <!-- dhamaadka formka loginka -->
-
-                      </div>
-
-
-  
-
-
-
+                      </div
                     </div>
                 </div>
                   </div>
