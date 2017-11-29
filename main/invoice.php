@@ -36,7 +36,7 @@ return $data;
 }
 if (isset($_GET['gid'])) {
   $id=$_GET['gid'];
-$sql= "SELECT gid, gfullname, date_format(gdate,'%m/%d/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room WHERE gid ='$id'";
+$sql= "SELECT  gid, gfullname, date_format(gdate,'%m/%d/%Y') as gdate, floor, rno, rtype, rprice, paid  FROM room WHERE gid ='$id'";
 $search_result = mysqli_query($conn, $sql);
 while ($rows = mysqli_fetch_array($search_result))
   { 
@@ -101,7 +101,6 @@ while ($rows = mysqli_fetch_array($search_result))
       <br>
       <br>
       <div class="container-fluid">
-    <!-- <h1 class="well">Gust Regestration </h1> -->
 	<div class="row">
   <div class="col-md-10">
   <div class="panel panel-primary">

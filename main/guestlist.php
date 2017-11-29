@@ -152,6 +152,7 @@ th{
                     <th>Gender</th>
                     <th>Action</th>
                     <th>Action</th>
+                    
                     </tr>       
         <?php
             while($row = mysqli_fetch_array($result)){ ?>
@@ -197,6 +198,8 @@ th{
                     <td>
                      <a href="?idDelete=<?php echo $row['gid'] ?>"><button name="idDelete" type="submit" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i> Delete</button></a>  
                     </td>
+                      
+                       
                 </tr> <?php 
             }
     }

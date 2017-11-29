@@ -4,7 +4,6 @@ session_start();
 if(!isset($_SESSION['username'])){
     header('location: login.php');
 }
-// header("location: guestlist.php");
 ?>
 <?php
 $host ="localhost";
@@ -66,7 +65,7 @@ $paid=$rows['paid'];
 
 
 if (isset($_POST['search'])) {
-    $search_query= "SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room";
+    $search_query= "SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid,  FROM room";
 	$search_result = mysqli_query($conn, $search_query);
 while ($rows = mysqli_fetch_array($search_result))
 			{
@@ -143,11 +142,11 @@ th{
     if(isset($_POST["query"]))
     {
         $search = mysqli_real_escape_string($conn, $_POST["query"]);
-        $query = " SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status FROM room  WHERE gid LIKE '%".$search."%' OR gfullname LIKE '%".$search."%'  OR floor LIKE '%".$search."%'  OR rno LIKE '%".$search."%'";
+        $query = " SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid FROM room  WHERE gid LIKE '%".$search."%' OR gfullname LIKE '%".$search."%'  OR floor LIKE '%".$search."%'  OR rno LIKE '%".$search."%'";
     }
     else
     {
-        $query = " SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid, room_status  FROM room ORDER BY gid ";
+        $query = " SELECT gid, gfullname, date_format(gdate,'%d/%m/%Y') as gdate, floor, rno, rtype, rprice, paid FROM room ORDER BY gid ";
     }
     $result = mysqli_query($conn, $query);
     if(mysqli_num_rows($result) > 0)

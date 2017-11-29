@@ -11,7 +11,7 @@ float:left;
  background-color:white;
  color:red; bold:solid;">
 </i>
-      <span class="logo-lg"><b>YAASMIIN</b> HOTEL</span>
+      <span class="logo-lg"><b> HOTEL YAASMIIN </b></span>
     
     </a>
 

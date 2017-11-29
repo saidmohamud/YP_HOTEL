@@ -14,6 +14,7 @@
 
 <!-- <script src="js/bootstrap.min.js"></script> -->
    <style>
+    
      .wagad{
        color:white;
        background-color:#2A3F54;
@@ -26,10 +27,10 @@
      
      .text-footer{
        color:white;
-       background-color:#00A65B
+       background-color:#595CA8
      }
     .sidebar-menu{
-      font-size:16px
+      font-size:15px
        
      }
      #da-background{

@@ -2,17 +2,13 @@
 <!DOCTYPE html>
     <html lang="en">
       <head>
-      
-     
         <meta charset="utf-8">
         <title>LOGIN | YAASMIIN</title>
-     
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/datepicker.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-    
         <!-- Custom styles for this template -->
         <link href="css/sticky-footer-navbar.css" rel="stylesheet">
         <script src="js/ie.js"></script>
@@ -60,7 +56,7 @@
     background-repeat:no-repeat;
     background-size: 100% 100%;
 }
-.btn-success{background-color:blue}
+.btn-primary{background-color:red}
     </style>
       </head>
       <body>
@@ -69,7 +65,7 @@
     <img src="main/css/images/yaasmiin.png" style="height:160px"><img><br>
     <img src="main/css/images/welcome.png" style="height:90px; width:600px"><img><br>
        </p>
-    <p style="color:red" align="center"><button href="javascript:;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal">
+    <p  align="center"><button href="javascript:;" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
           LOGIN HERE
     </button>  
     </p>
