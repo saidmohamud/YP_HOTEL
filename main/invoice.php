@@ -36,7 +36,7 @@ return $data;
 }
 if (isset($_GET['gid'])) {
   $id=$_GET['gid'];
-$sql= "SELECT  gid, gfullname, date_format(gdate,'%m/%d/%Y') as gdate, floor, rno, rtype, rprice, paid  FROM room WHERE gid ='$id'";
+$sql= "SELECT gid, gfullname, date_format(gdate,'%m/%d/%Y') as gdate, floor, rno, rtype, rprice, paid FROM guest WHERE gid ='$id'";
 $search_result = mysqli_query($conn, $sql);
 while ($rows = mysqli_fetch_array($search_result))
   { 
@@ -55,7 +55,7 @@ while ($rows = mysqli_fetch_array($search_result))
       $gid= $_POST["gid"];
       $sql = "insert into biling (gfullname, rno, floor, rtype, gdate, bdate, quantity, price, amount, paid) values ('$info[1]', '$info[2]', '$info[3]', '$info[4]', '$info[5]', '$info[6]', '$info[7]', '$info[8]', '$info[9]', '$info[10]')";
         if($conn->query($sql) === true)
-        $query = "DELETE FROM room  WHERE gid=".$gid;
+        $query = "DELETE FROM guest WHERE gid=".$gid;
         if($conn->query($query) === true){
           header("location:invoices.php");
         }

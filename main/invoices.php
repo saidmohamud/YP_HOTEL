@@ -103,7 +103,7 @@ if(isset($_GET['idDelete'])){
          <div class="row">
          <div class="col-xs-11">
         <div class="text-right">
-        <a href="room.php" class="btn btn-warning" role="button"><i class="fa fa-plus-circle"  ></i> Add Check Out</a>
+        <a href="search.php" class="btn btn-warning" role="button"><i class="fa fa-plus-circle"  ></i> Add Check Out</a>
         </div>
     </div>
 </div>

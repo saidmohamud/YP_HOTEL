@@ -7,7 +7,6 @@ $rno="";
 $floor="";
 $rtype="";
 $rprice="";
-
 $paid="";
 	    function getData(){
 		$data = array();
@@ -18,7 +17,6 @@ $paid="";
 		$data[4] = $_POST['floor'];
 		$data[5] = $_POST['rtype'];
 		$data[6] = $_POST['rprice'];
-		
 		$data[8] = $_POST['paid'];
 		return $data;
 	    }
@@ -33,9 +31,9 @@ $paid="";
         }
 		elseif(mysqli_num_rows($result) >= 0)
 		{
-			$sql = "INSERT INTO room (gfullname, gdate, rno, floor, rtype, rprice, room_status, paid) values ('$info[1]', '$info[2]', '$info[3]', '$info[4]', '$info[5]', '$info[6]', '$info[7]', '$info[8]' )";
+			$sql = "INSERT INTO guest (gfullname, gdate, rno, floor, rtype, rprice) values ('$info[1]', '$info[2]', '$info[3]', '$info[4]', '$info[5]', '$info[6]' )";
 			if($conn->query($sql) === true){
-				header("location:rsearch.php");
+				header("location:search.php");
 			}
 			$query = "UPDATE roomno set room_status='Accupied' WHERE rno='$info[3]'";
 			if($conn->query($query) === true){
@@ -86,14 +84,14 @@ include "tables/config.php";
 			<div class="panel-heading"><center><h4> CHECKIN</h4></center> 
 			</div>
 			<div class="panel-body">
-				<form  class="form-horizontal"  id="guest-form"  method="post" >				
+            <form  class="form-horizontal"  id="guest-form"  method="post" >				
 						<div class="row">
                       <div class="col-md-6">
                       	<label control-label" for="gfullname"">Fullname*</label>
                         <div class="control-group">
                          <select  id="gfullname" name="gfullname"  class="form-control" >
                                  <?php
-                                            $sql = "select gfullname  from guest";
+                                            $sql = "select gfullname  from room";
                                             $result = $conn->query($sql);
                                             if($result->num_rows > 0) {
                                                 while($row = $result->fetch_assoc()) { ?>
@@ -113,7 +111,7 @@ include "tables/config.php";
               </div>  
               <br>
               <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
 								<label  control-label" for="city"">Room Number*</label>
                 
                 <select style="color:black" id="rno" name="rno"  class="form-control" >
@@ -132,16 +130,17 @@ include "tables/config.php";
                             
                            
                             
-              <div class="col-sm-4" >
+              <div class="col-sm-6" >
 								<label control-label" for="floor"">Floor*</label>
 								<div class="control-group">
                                  <input style="color:black" type="text"  id="floor" name="floor" placeholder="Enter floor no.."   class="form-control" > 
                                 </div>
 							</div>
-                                  
+                            </div>
+                           <br>       
            
-            
-					<div class="col-sm-4 ">
+                      <div class="row">
+					<div class="col-sm-6 ">
 						<label   control-label" for="room_price"">Room Type*</label>
                        <select style="color:black" id="rtype" name="rtype"  class="form-control" >
                                 <?php
@@ -155,22 +154,13 @@ include "tables/config.php";
                                         ?>
                                   </select>             
             </div>
-            </div>
-            <br>
-            <div class="row">
+           
             <div class="col-sm-6" >
 						<label  control-label" for="room_price"">Room Price*</label>
 					
-          <input style="color:black" type="text" id="price" name="rprice" placeholder="Enter room price.."   class="form-control" > 	
+          <input style="color:black" type="text" id="rprice" name="rprice" placeholder="Enter room price.."   class="form-control" > 	
             </div>
             
-                      <div class="col-md-6 ">
-							<label  >Amount paid</label>
-              <div class="control-group">
-							<input style="color:black" type="text" name="paid" placeholder="Enter amount paid Code Here.." class="form-control" >
-					
-              </div>
-            </div>
                       </div>
                       <div class="form-group">
                         <div class="col-md-6  col-md-offset-4">

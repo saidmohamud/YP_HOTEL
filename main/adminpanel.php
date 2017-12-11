@@ -156,7 +156,8 @@
                             <i class="fa fa-table"></i>
                             <?php
                              $con=mysqli_connect("localhost","root","","simpledata");
-                             $sql="select count(gid) as gid from roomno";
+                             $sql="select count(gid) as gid from roomno ";
+                           //  $sql="select count(gid) as gid from roomno where room_status='Available'";
                              $result = $con->query($sql);
                              if($result->num_rows > 0){
                                while($row = $result->fetch_assoc()){?>
@@ -180,7 +181,7 @@
                             <p>Checkout List</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
-                            <i class="fa fa-table"></i>
+                            <i class="fa fa-share"></i>
                             <?php
                              $con=mysqli_connect("localhost","root","","simpledata");
                              $sql="select count(gid) as gid from biling";
@@ -218,7 +219,6 @@
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div>   
-            
 			    </div><!-- /.row -->
 	      </section><!-- /.content -->
         </div><!-- /.container -->

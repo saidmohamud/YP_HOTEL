@@ -103,7 +103,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="addguest.php"><B>GEUST REGISTER</B></a></li>
-            <li><a href="search.php"><B>GUEST LIST</B></a></li>
+            <li><a href="rsearch.php"><B>GUEST LIST</B></a></li>
+            <li><a href="mobile.php"><B>Mobile Access</B></a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -113,8 +114,8 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="checkin.php"><B>CHECKIN REGISTER</B></a></li>
-            <li><a href="rsearch.php"><B>CHECKIN LIST</B></a></li>
+            <!-- <li><a href="checkin.php"><B>CHECKIN REGISTER</B></a></li> -->
+            <li><a href="search.php"><B>CHECKIN LIST</B></a></li>
             <li><a href="amounts.php"><B>INVOICE LIST</B></a></li>
           </ul>
         </li>

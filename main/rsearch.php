@@ -21,12 +21,18 @@ $pswd = "";
 $db = "simpledata";
 $gid="";
 $gfullname="";
-$gdate="";
+// $gaddress="";
+// $gcountry="";
+// $gcity="";
+ $gdate="";
+// $gphone="";
+// $gemail="";
+// $ggender="";
 $floor="";
 $rno="";
 $rtype="";
-$room_status="";
 $rprice="";
+$paid="";
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
 $conn = new mysqli($host,$user,$pswd,$db);//(MySQLi Object-oriented)
@@ -35,12 +41,18 @@ function getData()
 $data =array();
 $data[0] =$_POST['gid'];
 $data[1] =$_POST['gfullname'];
-$data[2] =$_POST['gdate'];
+// $data[2] =$_POST['gaddress'];
+// $data[3] =$_POST['gcountry'];
+// $data[4] =$_POST['gcity'];
+ $data[2] =$_POST['gdate'];
+// $data[6] =$_POST['gphone'];
+// $data[7] =$_POST['gemail'];
+// $data[8] =$_POST['ggender'];
 $data[3] =$_POST['floor'];
 $data[4] =$_POST['rno'];
 $data[5] =$_POST['rtype'];
 $data[6] =$_POST['rprice'];
-$data[7] =$_POST['paid'];
+//$data[7] =$_POST['paid'];
 return $data;
 }
 if (isset($_POST['searchid'])) {
@@ -49,15 +61,20 @@ if (isset($_POST['searchid'])) {
     $search_result =mysqli_query($conn,$sql);
 if (mysqli_num_rows($search_result)){
  while ($rows=mysqli_fetch_array($search_result)) {
-$id=$rows['gid'];
-$gfullname=$rows['gfullname'];
-$date=$rows['gdate'];
-$floor=$rows['floor'];
-$rno=$rows['rno'];
-$rtype=$rows['rtype'];
-$rprice=$rows['rprice'];
-$room_status=$rows['room_status'];
-$paid=$rows['paid'];
+    $gid=$rows['gid'];
+    $gfullname=$rows['gfullname'];
+    // $gaddress=$rows['gaddress'];
+    // $gcountry=$rows['gcountry'];
+    // $gcity=$rows['gcity'];
+    $gdate=$rows['gdate'];
+    // $gphone=$rows['gphone'];
+    // $gemail=$rows['gemail'];
+    // $ggender=$rows['ggender'];
+    $floor=$rows['floor'];
+    $rno=$rows['rno'];
+    $rtype=$rows['rtype'];
+    $rprice=$rows['rprice'];
+    $paid=$rows['paid'];
 }
 }
 }
@@ -71,7 +88,7 @@ while (  $row=$ressalt->fetch_assoc()) {
 $id=$row['gid'];
 $name=$row['gfullname'];
 } 
-$sql = "UPDATE room SET gfullname='$info[1]', gdate='$info[2]', floor='$info[3]', rno='$info[4]', rtype='$info[5]', rprice='$info[6]', paid='$info[7]' WHERE gid='$info[0]'";
+$sql = "UPDATE room SET gfullname='$info[1]', gdate='$info[2]', floor='$info[3]', rno='$info[4]', rtype='$info[5]', rprice='$info[6]' WHERE gid='$info[0]'";
 if ($conn->query($sql)===TRUE) {
 }
 else {
@@ -98,7 +115,7 @@ if(isset($_GET['idDelete'])){
          <div class="row">
          <div class="col-xs-11">
         <div class="text-right">
-        <a href="checkin.php" class="btn btn-warning" role="button"><i class="fa fa-plus-circle"  ></i> Add New Person</a>
+        <a href="addguest.php" class="btn btn-warning" role="button"><i class="fa fa-plus-circle"  ></i> Add New Person</a>
         </div>
     </div>
 </div>
@@ -108,7 +125,7 @@ if(isset($_GET['idDelete'])){
 <div class="container-fluid">
 <div class="row">
 <div class="col-sm-12  ">
-<h3 style="border:2px solid white; background-color:#b4b4b4"; align="center"> <B style="font-family: Times New Roman, Times, serif; color:white"><strong>CHECK IN LIST</strong></B></h3>
+<h3 style="border:2px solid white; background-color:#b4b4b4"; align="center"> <B style="font-family: Times New Roman, Times, serif; color:white"><strong>Guest List</strong></B></h3>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">Search</span>

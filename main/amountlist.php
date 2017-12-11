@@ -192,38 +192,8 @@ th{
 else{
  echo 'Data Not Found';}
 echo "</table></div>";
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-			<table class="table table-bordered table-stripped table-condensed">
-				<tr>
-					<th>ID</th>
-					<th>Full Name</th>
-					<th>Address</th>
-					<th>Country</th>
-					<th>City</th>
-                    <th>Date</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Gender</th>
-				</tr> -->
-	 
-		 
-		</div>
+?>	
+	</div>
 
 
 		  </div>  

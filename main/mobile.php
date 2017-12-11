@@ -14,83 +14,46 @@ $db = "simpledata";
 $gid="";
 $gfullname="";
 $gdate="";
-$rno="";
+$gaddress="";
+$gphone="";
+$ggender="";
 $floor="";
+$rno="";
 $rtype="";
 $rprice="";
-$paid="";
+
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //$conn = mysqli_connect($host,$user,$pswd,$db);//(MySQLi Procedural)
 $conn = new mysqli($host,$user,$pswd,$db);//(MySQLi Object-oriented)
 
-
-function getData()
-{
-    $data =array();
-        $data[0] = $_POST['gid'];
-		$data[1] = $_POST['gfullname'];
-		$data[2] = $_POST['gdate'];
-		$data[3] = $_POST['rno'];
-		$data[4] = $_POST['floor'];
-		$data[5] = $_POST['rtype'];
-		$data[6] = $_POST['rprice'];
-		$data[7] = $_POST['paid'];
-    return $data;
-    }
-    if (isset($_POST['searchid'])) {
-        $info = getData();
-        $sql = "SELECT * FROM guest WHERE gid= '$info[0]'";
-        $search_result =mysqli_query($conn,$sql);
-    if (mysqli_num_rows($search_result)){
-     while ($rows=mysqli_fetch_array($search_result)) {
+  
+	// if(isset($_POST['register'])) {
+        
+	// 	$info = getData();
+    //     $sql = "INSERT INTO room (gfullname, gdate, gaddress, gphone, ggender, floor, rno, rtype, rprice) values ('$info[1]', '$info[2]', '$info[3]', '$info[4]', '$info[5]', '$info[6]', '$info[7]', '$info[8]', '$info[9]' )";
+    // if($conn->query($sql) === true){
+    //     header("location:rsearch.php");
+	// 		}
+	// 		$query = "UPDATE roomno set room_status='Accupied' WHERE rno='$info[7]'";
+    //   if($conn->query($query) === true){
+    //     echo("Data has been updated");
+    //   }
+    //   $query = "INSERT INTO guest (gfullname, gdate, rno, floor, rtype, rprice) values ('$info[1]', '$info[2]', '$info[7]', '$info[6]', '$info[8]', '$info[9]' )";
+    //   if($conn->query($query) === true){
+    //     echo("inserted");
+    //   }
+	// }
     
-    $gid=$rows['gid'];
-    $gfullname=$rows['gfullname'];
-    $gdate=$rows['gdate'];
-    $floor=$rows['floor'];
-    $rno=$rows['rno'];
-    $rtype=$rows['rtype'];
-    $rprice=$rows['rprice'];
-    $paid=$rows['paid'];
-    }
-    }
-    }
-
-    // Update Command
-    if (isset($_POST['update'])) {
-          $info = getData();
-    $sql = "UPDATE guest SET gfullname='$info[1]', gdate='$info[2]', floor='$info[3]', rno='$info[4]', rtype='$info[5]', rprice='$info[6]', paid='$info[7]' WHERE gid='$info[0]'";
-    if ($conn->query($sql)===TRUE) {
-     
-    }
-    else {
-        echo" Error updating record".mysql_error($conn);
-    }
-    }
-    
-    if(isset($_GET['idDelete'])){
-        $idDelete = $_GET['idDelete'];
-        $sql = "delete from guest where gid='$idDelete'";
-        if($conn->query($sql)===true) {
-            header("location: search.php");
-        }
-        else { ?>
-            <script>
-                alert("failed to delete");
-                window.location.href='search.php';
-            </script>
-            <?php
-            echo "failed to delete";
-        }
-    }
-    ?><!DOCTYPE html>
+   
+    ?>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <title>YAASMIIN | HOTEL</title>
     <?php include("Linkfooter.php"); ?>
     <?php include("links.php"); ?>
@@ -110,7 +73,8 @@ function getData()
          <div class="row">
          <div class="col-md-11">
         <div class="text-right">
-        <a href="checkin.php" class="btn btn-warning" role="button"><i class="fa fa-plus-circle"  ></i> Check in Heare</a>
+        <a href="addguest.php" class="btn btn-warning" role="button"><i class="fa fa-plus-circle"  ></i> Add New Guest</a>
+       
         </div>
     </div>
 </div>
@@ -135,7 +99,7 @@ function getData()
         function load_data(query)
         {
             $.ajax({
-            url:"guestlist.php",
+            url:"mobiles.php",
             method:"POST",
             data:{query:query},
             success:function(data)

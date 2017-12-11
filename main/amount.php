@@ -28,7 +28,7 @@ return $data;
 }
 if (isset($_GET['gid'])) {
   $id=$_GET['gid'];
-$sql= "SELECT * FROM room WHERE gid ='$id'";
+$sql= "SELECT * FROM guest WHERE gid ='$id'";
 $search_result = mysqli_query($conn, $sql);
 while ($rows = mysqli_fetch_array($search_result))
   {
@@ -50,7 +50,7 @@ while ($rows = mysqli_fetch_array($search_result))
       $gid= $_POST["gid"];
       $sql = "insert into dbiling (gfullname, rno, floor, rtype, gdate, paid) values ('$info[1]', '$info[2]', '$info[3]', '$info[4]', '$info[5]', '$info[6]')";
         if($conn->query($sql) === true)
-        $query = "update room set paid =paid+".$ab." WHERE gid=".$gid;
+        $query = "update guest set paid =paid+".$ab." WHERE gid=".$gid;
         if($conn->query($query) === true){
           header("location:amounts.php");
         }
@@ -161,24 +161,5 @@ while ($rows = mysqli_fetch_array($search_result))
     </div>
     <?php include("footer.php"); ?>
     </body>
-    <!-- <script type="text/javascript">
-    $(document).ready(function(){
-      $("input").change(function(){
-        var total = 0;
-        $("#diff").each(function(){
-          total = parseFloat($("#diff").val()) * parseFloat($("#price").val());
-        });
-        $("#amount").val(total);
-      });
-    });
-    </script>
-    <script>
-                $('#date1').datepicker();
-                $('#date2').datepicker();
-    
-                $('#date2').change(function () {
-                    var diff = $('#date1').datepicker("getDate") - $('#date2').datepicker("getDate");
-                    $('#diff').val(diff / (1000 * 60 * 60 * 24) * -1);
-                });
-            </script> -->
+   
 </html>
